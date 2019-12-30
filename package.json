@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/andyrich75/eat-burger/issues"
   },
-  "homepage": "https://github.com/andyrich75/eat-burger#readme"
+  "homepage": "https://github.com/andyrich75/eat-burger#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
