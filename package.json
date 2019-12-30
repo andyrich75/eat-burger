@@ -1,0 +1,21 @@
+{
+  "name": "eat-burger",
+  "version": "1.0.0",
+  "description": "This application allows you to update a mySQL database with different burgers to be eaten.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyrich75/eat-burger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyrich75/eat-burger/issues"
+  },
+  "homepage": "https://github.com/andyrich75/eat-burger#readme"
+}
