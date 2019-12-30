@@ -3,3 +3,54 @@ body {
     background-color: #AF3A1B;
     color: #f1F2F2;
   }
+
+  h1 {
+    font-size: 48px;
+    font-family: monospace;
+    color: #FF9F00;
+    text-align: center;
+  }
+  
+  h2{
+    font-family: monospace;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .burger-lists{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  ol {
+    margin-left: 15px;
+    margin-right: 15px;
+    height:10vh;
+    padding:20px;
+  }
+  
+  
+  li {
+    font-family: monospace;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  
+  button {
+    background-color: #300000;
+    border: none;
+    color: white;
+  }
+  
+  input {
+    width: 100%;
+  }
+  
+  .form-group {
+    width: 40%;
+  }
