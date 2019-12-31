@@ -26,7 +26,7 @@ function printQuestionMarks(num) {
   
   var orm = {
     all: function(tableInput, cb) {
-      var queryString = "SELECT * FROM " + tableInput + ";";
+      var queryString = "SELECT * FROM burgers";
       connection.query(queryString, function(err, result) {
         if (err) {
           throw err;
@@ -35,7 +35,7 @@ function printQuestionMarks(num) {
       });
     },
     create: function(table, cols, vals, cb) {
-      var queryString = "INSERT INTO " + table;
+      var queryString = "INSERT INTO burgers (burger_name) VALUES (?)";
   
       queryString += " (";
       queryString += cols.toString();
@@ -46,7 +46,7 @@ function printQuestionMarks(num) {
   
       console.log(queryString);
   
-      connection.query(queryString, vals, function(err, result) {
+      connection.query(queryString, [burger], function (err, result)  {
         if (err) {
           throw err;
         }
@@ -55,7 +55,7 @@ function printQuestionMarks(num) {
       });
     },
     update: function(table, objColVals, condition, cb) {
-      var queryString = "UPDATE " + table;
+        var queryString = "UPDATE burgers SET devoured = true WHERE id = ?";
   
       queryString += " SET ";
       queryString += objToSql(objColVals);
@@ -63,7 +63,7 @@ function printQuestionMarks(num) {
       queryString += condition;
   
       console.log(queryString);
-      connection.query(queryString, function(err, result) {
+      connection.query(queryString, [id], function (err, result) {
         if (err) {
           throw err;
         }
