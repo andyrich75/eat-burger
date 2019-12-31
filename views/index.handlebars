@@ -15,7 +15,7 @@
 <ol class="uneated">
 <h2>To be Devoured</h2>
   {{#each burgers}}
-    {{#unless eaten}}
+    {{#unless devoured}}
       {{> burgers/burger devour=true}}
     {{/unless}}
   {{/each}}
@@ -24,7 +24,7 @@
 <ol class="eaten">
 <h2>Devoured</h2>
   {{#each burgers}}
-    {{#if eaten}}
+    {{#if devoured}}
       {{> burgers/burger devour=false}}
     {{/if}}
   {{/each}}
