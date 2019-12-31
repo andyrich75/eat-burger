@@ -4,7 +4,7 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
-  burger.all(function(data) {
+  burger.selectAll(function(data) {
     var hbsObject = {
       burgers: data
     };
@@ -15,12 +15,12 @@ router.get("/", function(req, res) {
 
 router.post("/api/burgers", function(req, res) {
   burger.create([
-    "name", "eaten"
+    'burger_name'
   ], [
-    req.body.name, req.body.eaten
-  ], function(result) {
+    req.body.burger_name
+  ], function(data) {
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.redirect('/');
   });
 });
 
@@ -29,14 +29,10 @@ router.put("/api/burgers/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  burger.update({
-    eaten: req.body.eaten
-  }, condition, function(result) {
-    if (result.changedRows == 0) {
-      return res.status(404).end();
-    } else {
-      res.status(200).end();
-    }
+  burger.updateOne({
+    devoured: true
+  }, condition, function(data) {
+    res.redirect('/');
   });
 });
 
