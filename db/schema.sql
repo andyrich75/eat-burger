@@ -1,12 +1,12 @@
-drop database if exists burger_db;
-CREATE DATABASE burger_db;
+drop database if exists sq5huo32n6fm91lo;
+CREATE DATABASE sq5huo32n6fm91lo;
 
-USE burger_db;
+USE sq5huo32n6fm91lo;
 
 CREATE TABLE burgers (
-id INTEGER auto_increment,
+id INTEGER ,
 burger_name VARCHAR(255),
 devoured BOOLEAN,
-date TIMESTAMP,
+createdAt TIMESTAMP NOT NULL,
 PRIMARY KEY(id)
 );

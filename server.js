@@ -2,9 +2,9 @@ var express = require("express");
 var PORT = process.env.PORT || 8080;
 var app = express();
 
-const dotenv = require('dotenv');
+//const dotenv = require('dotenv');
 const path = require('path');
-dotenv.config({path: path.resolve(__dirname, './config/.env')})
+//dotenv.config({path: path.resolve(__dirname, './config/.env')})
 
 app.use(express.static("public"));
 
